@@ -1,37 +1,6 @@
 
 
-//====================================SESSION======================================================
-// import BackendUrl from "../utils/BackendUrl";
-//  import Button from 'react-bootstrap/Button';
-// import axios from "axios";
-// const Home=()=>{
-//   const handleSubmit=async()=>{
-//    let api=`${BackendUrl}/`;
-//   const response = await axios.get(api, {
-//     withCredentials:true,
-//   });
-//   console.log(response);
-  
-//   }
-//   const handleSubmit1=async()=>{
-//    let api=`${BackendUrl}display`;
-//    const response = await axios.get(api, {
-//     withCredentials:true,
-// });
-//   console.log(response);
-  
-//   }
-//     return(
-//         <>
-//         <center style={{marginTop:"50px",display:"flex",justifyContent:"center",gap:"50px"}}>
-//          <Button onClick={handleSubmit}>save</Button>
-//          <Button onClick={handleSubmit1}>display</Button>
-//          </center>
-//         </>
-//     )
-// }
-// export default Home;
-
+//====================================SESSION=====================================================
 
 
 import { useState } from "react";
@@ -41,7 +10,7 @@ import axios from "axios"
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Home = () => {
+const App= () => {
   const [message, setMessage] = useState("");
 
   const handleSubmit = async () => {
@@ -90,4 +59,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default App;
