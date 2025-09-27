@@ -16,10 +16,10 @@ app.use(cors({
 }));
 
 // MongoDB connection
-mongoose.connect(process.env.DBCON), {
+mongoose.connect(process.env.DBCON, {
   useNewUrlParser: true,
   useUnifiedTopology: true
-}.then(() => console.log("Database connected"))
+}).then(() => console.log("Database connected"))
   .catch(err => console.error("DB connection error:", err));
 
 // Routes
