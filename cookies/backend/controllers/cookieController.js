@@ -1,7 +1,7 @@
 const bcrypt = require("bcryptjs");
 const User = require("../models/User");
 // Register
-router.post("/register", async (req, res) => {
+const Register= async (req, res) => {
   try {
     const { username, password } = req.body;
     const hashedPassword = await bcrypt.hash(password, 10);
@@ -10,10 +10,10 @@ router.post("/register", async (req, res) => {
   } catch (err) {
     res.status(500).json({ message: "Error registering user", error: err.message });
   }
-});
+};
 
 // Login
-router.post("/login", async (req, res) => {
+const Login= async (req, res) => {
   const { username, password } = req.body;
   const user = await User.findOne({ username });
   if (!user) return res.status(400).json({ message: "User not found" });
@@ -28,18 +28,25 @@ router.post("/login", async (req, res) => {
     sameSite: "lax"
   });
   res.json({ message: "Login successful!" });
-});
+};
 
 // Profile
-router.get("/profile", async (req, res) => {
+const Profile=async (req, res) => {
   const { authToken } = req.cookies;
   if (!authToken) return res.status(401).json({ message: "Not authenticated" });
   const user = await User.findById(authToken).select("-password");
   res.json(user);
-});
+};
 
 // Logout
-router.post("/logout", (req, res) => {
+const Logout= (req, res) => {
   res.clearCookie("authToken");
   res.json({ message: "Logged out successfully!" });
-});
+};
+
+module.exports={
+    Register,
+    Login,
+    Profile,
+    Logout
+}
