@@ -4,7 +4,6 @@ const https = require('https');
 const {Server} = require("socket.io");
 const cors = require('cors');
 
-
 const app = express();
 app.use(cors());
 
@@ -22,7 +21,7 @@ io.on("connection", (socket) => {
     console.log(`User connected: ${socket.id}`);
 
     socket.on("send_message", (data) => {
-      console.log(data);
+      console.log("Message from client",data);
       //Broadcast message to all clients except sender
         socket.broadcast.emit("receive_message", data);
     });

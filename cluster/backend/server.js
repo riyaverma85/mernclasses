@@ -93,7 +93,7 @@ app.get("/users", async (req, res) => {
   }
 });
 
-// Dynamic Add User Route
+
 app.post("/add-user", async (req, res) => {
   try {
     const { name, email, age } = req.body;
@@ -106,5 +106,5 @@ app.post("/add-user", async (req, res) => {
 });
 
 app.listen(5000, () => {
-  console.log("🚀 Server running on port 5000");
+  console.log("Server running on port 5000");
 });
