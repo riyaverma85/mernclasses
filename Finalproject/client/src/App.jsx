@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import AuthForm from "./components/AuthForm";
 import ProductList from "./components/ProductList";
 import Cart from "./components/Cart";
-import "./App.css";
+import "./style.css";
 
 
 function App() {
