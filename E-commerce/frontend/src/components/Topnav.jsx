@@ -1,31 +1,25 @@
+
+import { Link } from "react-router-dom";
 import "../css/navbar.css";
+import { Navbar, Nav, Container } from "react-bootstrap";
 
-
-const Topnav = () => {
+const TopNav = () => {
   return (
-    <nav className="navbar">
-      <div className="logo">🌿 OrganicMart</div>
-
-      <ul className="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#shop">Shop</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-
-      {/* Search Bar */}
-      <div className="search-container">
-        <input type="text" placeholder="Search organic products..." />
-        <button><i className="bi bi-search"></i></button>
-      </div>
-
-      <div className="nav-icons">
-        <i className="bi bi-cart3"></i>
-        <i className="bi bi-person-circle"></i>
-      </div>
-    </nav>
+    <Navbar expand="lg" className="topnav shadow-sm sticky-top">
+      <Container fluid>
+        <Navbar.Toggle aria-controls="organic-navbar" className="bg-light" />
+        <Navbar.Collapse id="organic-navbar" className="justify-content-center">
+          <Nav className="nav-links">
+            <Nav.Link as={Link} to="/home">Home</Nav.Link>
+            <Nav.Link as={Link} to="/shop">Shop</Nav.Link>
+            <Nav.Link as={Link} to="/about">About</Nav.Link>
+            <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
+            <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 };
 
-export default Topnav;
+export default TopNav;

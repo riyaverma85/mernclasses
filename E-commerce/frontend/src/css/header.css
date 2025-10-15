@@ -1,0 +1,161 @@
+.header {
+  background: #ffffff;
+  z-index: 1000;
+}
+.header-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d572c;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  padding: 5px 10px;
+  width: 280px;
+  transition: 0.3s ease;
+}
+
+.search-container input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+.search-container button {
+  border: none;
+  background: #2d572c;
+  color: #fff;
+  border-radius: 50%;
+  padding: 6px 10px;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-container button:hover {
+  background: #45a049;
+}
+
+.header-icons .icon {
+  font-size: 1.8rem;
+  margin-left: 18px;
+  color: #2d572c;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.header-icons .icon:hover {
+  color: #45a049;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .search-container {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-icons {
+    margin-top: 10px;
+  }
+}
+.header {
+  background: #ffffff;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.header-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d572c;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  padding: 5px 10px;
+  width: 280px;
+  transition: 0.3s ease;
+}
+
+.search-container input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.search-container button {
+  border: none;
+  background: #2d572c;
+  color: #fff;
+  border-radius: 50%;
+  padding: 6px 10px;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-container button:hover {
+  background: #45a049;
+}
+
+.header-icons .icon {
+  font-size: 1.8rem;
+  margin-left: 18px;
+  color: #2d572c;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.header-icons .icon:hover {
+  color: #45a049;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .search-container {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .header-icons {
+    margin-top: 10px;
+  }
+
+  .header-icons .icon {
+    margin-left: 10px;
+  }
+}

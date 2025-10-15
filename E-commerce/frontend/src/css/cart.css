@@ -1,0 +1,21 @@
+.qty-control button { 
+    padding:6px 10px; 
+    border-radius:6px; 
+    border:none; 
+    background:#ddd; 
+    cursor:pointer; }
+.remove-btn{ 
+    background:#e53935; 
+    color:#fff; 
+    border:none; 
+    padding:6px 10px; 
+    border-radius:6px; 
+    cursor:pointer; }
+.checkout-btn{ 
+    background:#2d572c; 
+    color:#fff; 
+    padding:10px 16px; 
+    border:none; 
+    border-radius:8px; 
+    cursor:pointer; 
+}
